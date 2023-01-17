@@ -92,7 +92,15 @@ class WindowManager {
   Future<void> ensureInitialized() async {
     await _channel.invokeMethod('ensureInitialized');
   }
-
+  
+  Future<void> forceRefresh() async {
+    await _channel.invokeMethod('forceRefresh');
+  }
+  
+  Future<void> forceChildRefresh() async {
+    await _channel.invokeMethod('forceChildRefresh');
+  }
+  
   Future<void> setAsFrameless() async {
     await _channel.invokeMethod('setAsFrameless');
   }
